@@ -1,0 +1,20 @@
+Jeff Rix
+rixj@onid.oregonstate.edu
+CS311-400
+Homework2 Problem 8
+
+
+(gdb) run
+Starting program: /nfs/stak/students/r/rixj/Problem8
+
+Program received signal SIGSEGV, Segmentation fault.
+0x000000000040049c in func (ptr=0x0) at Problem8.c:9
+9                       ptr[i] = i;
+Missing separate debuginfos, use: debuginfo-install glibc-2.12-1.132.el6.x86_64
+(gdb) bt
+#0  0x000000000040049c in func (ptr=0x0) at Problem8.c:9
+#1  0x00000000004004cd in main (argc=1, argv=0x7fffffffe398) at Problem8.c:15
+(gdb) print ptr
+$1 = (int *) 0x0
+(gdb) print i
+$2 = 0

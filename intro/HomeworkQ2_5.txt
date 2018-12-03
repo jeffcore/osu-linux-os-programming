@@ -1,0 +1,43 @@
+CS311 Homework 1
+Jeff Rix
+rixj@onid.oregonstate.edu
+CS311-400
+
+
+2. What are revision control systems? They are applications that are used 
+manage changes in files, code or documents.
+Why are they useful? They enables one or many people to easily make edits 
+to source code of computer programs or websites without having to worry 
+about overwriting each others edits.. .  It offers the ability to notice 
+conflicting edits in files and has the ability to merge these documents. 
+They also give the user the ability to fork an existing code base and 
+evolve it into a new direction. 
+Name 4 examples:
+Git, Subversion, CVS, Bazaar
+
+Name three common commands that the above RCSs use:
+checkout: used to export the code repository to your local machine
+add: adds a new file from local machine into code repository
+commit: used to commit your code changes to the repository
+
+3. Describe the difference between redirection and piping on Unix. 
+Redirection: instead of the output of a command being displayed on the 
+screen (STDOUT), redirection ( > )  redirects the output somewhere else 
+(examples: would be to a text file or a directory)
+Piping ( | ): sends the result of the first command/utility to the second
+command/utility
+
+The main difference is that redirection just redirects the results before 
+hitting standard output to some other output like file and piping takes 
+the standard output or stream of data and sends it to another utility.
+
+4.
+find /home/ -type f -exec file -b '{}' \;
+
+5. The unix make command is used to compile source code from one 
+or multiple files of a project. It does this by searching for a make file 
+that lists all the commands and rules for compiling a project.  Make, is 
+also intelligent enough to know what files of a program need to be recompiled 
+based on changes. Make is  useful because it automates and simplifies the 
+compiling process of large programs. It can also speed up the compiling process 
+because it only compiles files that are changed..

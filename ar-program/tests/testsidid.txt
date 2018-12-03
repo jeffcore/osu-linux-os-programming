@@ -1,0 +1,45 @@
+Jeff Rix
+rixj@onid.oregonstate.edu
+CS311-400
+Homework 4 Problem 4 Makefile
+
+A text file describing what tests you ran.
+I entered all the described tests in the directions. I used a few macros 
+on the repetitive 
+statements. I used the .tests: testq testt testv. after every time I 
+compiled the code. 
+
+I next moved onto the -x extraction option.  
+
+testxall:
+This test gave me the ability to alter the 1.txt file after adding it to 
+the archive. Then I 
+added the change 1.txt file to the archive. This tested the ability to 
+extract only the first found
+file and also see if the text in 1.txt was change. 
+
+testx2:
+This was as similar test to textxall. I added two text files to the 
+archive and have the ability to 
+change the text in them. Next I extracted 2.txt and ran pico to see the 
+changes in both files.
+
+testd1:
+This was my favorite test, it tested the deletion option.  I added 1.txt 
+to the archive and sent the 
+results 1.ar text to a text file. Then I added another text file, deleted 
+it and wrote the contents 
+of 1.ar to another text file. Then I ran diff on the two text files to see 
+if they matched.
+
+testd1:
+This test was similar to testd1, except it tested the first file found 
+concept. 
+
+testdm1:
+This was just my first attempt at making a test for first file found for 
+the -d option.
+
+copy:
+I just used this to move the executable to another folder to manually test 
+the -A option.

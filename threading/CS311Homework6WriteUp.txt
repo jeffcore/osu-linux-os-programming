@@ -1,0 +1,47 @@
+CS311 Homework 06 Write-Up
+Jeff Rix
+rixj@onid.oregonstate.edu
+CS311-400
+
+Threaded and Process Version
+My method for partitioning the work was to split my the bit array equally between all the 
+threads/processes.  I split them up based on elements of the bit array (or by groups of individual 
+four byte integers). This method enabled me to equally split up the memory so there would be no 
+concurrent writes from multiple threads/processes to the same memory segments or integers. 
+
+Example
+Threads  10
+Max Value: 40000
+
+First figure out size of bit array
+40000/32 + 1 = 1251
+Divide size of bit array by number of threads
+1251/10 = 125
+125 is the number of elements from bit array to be distributed to each thread (the end thread has 
+additional logic to shorted bit array size appropriately)
+
+Each thread would perform further calculations to obtain min and max bit array indexes and then 
+convert this back to actual range of min max number that the sieve will be performed on. 
+
+Once a threads/processes had a chunk of memory I would sieve through only the numbers in the 
+section of memory.  
+
+There was one exception, if I was unable to equally split up the four byte memory segments among 
+the threads, then I just ran one thread/process. 
+
+Threaded Version Marking Twin Primes
+After the prime numbers where marked I create another batch of threads to mark the twin primes. I 
+split the bit array up based on number of threads. I took each section of the bit array and looped 
+through the prime numbers looking for twin primes.
+
+Processes Version Marking Twin Primes
+I decided not to create new processes for marking the twin primes. Considering my method for marking 
+the twin primes was just a loop through the entire bit array, it would be easier to implement this 
+in the parent process. I felt that it wouldn.t save me any time spawning new processes to achieve 
+this simple goal.
+
+
+
+
+
+
